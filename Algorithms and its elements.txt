@@ -1,0 +1,28 @@
+ALGORITHM Check_sentence
+
+VAR
+i, n_char, n_words, n_vowels:integer;
+ch:string;
+
+BEGIN
+n_char:=0;
+n_words:=0;
+n_vowels:=0;
+Read(ch)
+
+FOR i FROM 0 TO length(ch) DO
+	n_char++;
+
+	IF (ch[i]==" " or ".")
+		n_words++;
+
+	IF (ch[i]=="a" or "e" or "i" or "o" or "u" or "y")
+		n_vowels++;
+END FOR
+
+WRITE("the length of the sentence is:" + string(n_char))
+WRITE("the number of words is:" + string(n_words))
+WRITE("the number of vowels is:" + string(n_vowels))
+
+END
+
